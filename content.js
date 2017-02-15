@@ -25,6 +25,7 @@
           'Madshus',
           'Ride Snowboards',
           'Tubbs Snowshoes',
+          'Vashon Storefront',
           'Zoot'
       ];
       k2Sites.forEach(function(site) {
