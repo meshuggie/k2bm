@@ -1,4 +1,6 @@
-(function($) {
+import * as jQuery from 'jquery';
+export function bmMenu() {
+  return (function($) {
     if ($('.sod_list_wrapper').length) {
       updateBMMenu();
     }
@@ -106,4 +108,5 @@
       $('.sod_list_wrapper').slideDown(150);
       $('.sod_select').addClass('open');
     }
-})( jQuery );
+  })( jQuery );
+}
