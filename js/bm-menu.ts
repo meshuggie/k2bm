@@ -18,15 +18,15 @@ export function bmMenu() {
       tamperMenuHtml += '<span class="sod_list_wrapper" style="overflow: visible;">';
       var k2Sites = [
           'K2 Skates',
-          'K2 Snowboarding',
+          'K2 Snow',
           'K2 Skis',
           'Atlas Snowshoes',
           'BCA',
           'Full Tilt Boots',
           'Line Skis',
           'Madshus',
-          'Ride Snowboards',
-          'Tubbs Snowshoes',
+          'Ride',
+          'Tubbs',
           'Vashon Storefront',
           'Zoot'
       ];
