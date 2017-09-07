@@ -17,52 +17,52 @@ export function bmMenu() {
       tamperMenuHtml += '<span class="sod_label" title="' + currName + '">' + currName + '</span>';
       tamperMenuHtml += '<span class="sod_list_wrapper" style="overflow: visible;">';
       var k2Sites = [
-          'K2 Skates',
-          'K2 Snow',
-          'K2 Skis',
-          'Atlas Snowshoes',
-          'BCA',
-          'Full Tilt Boots',
-          'Line Skis',
-          'Madshus',
-          'Ride',
-          'Tubbs',
-          'Vashon Storefront',
-          'Zoot'
+        'K2 Skates',
+        'K2 Snow',
+        'K2 Skis',
+        'Line Skis',
+        'Ride',
+        'Tubbs',
+        'Vashon Storefront',
+        'Atlas Snowshoes',
+        'BCA',
+        'Full Tilt Boots',
+        'Madshus',
+        'Zoot'
       ];
       k2Sites.forEach(function(site) {
-          if ( $('.sod_option[title*="' + site + '"]').length > 1 ) {
-              tamperMenuHtml += '<span class="sod_container" style="position: relative; display: block; white-space: nowrap; width: 100%;">';
-              tamperMenuHtml += '<span title="' + site + '" style="display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; position: relative; padding: 10px; margin: 5px 0; list-style-type: none;">' + site + '<span style="position: absolute;transform: translate(0, -50%);top: 46%;right: 7px;font-weight: bold;font-size: 24px;">&rsaquo;</span></span>';
-              tamperMenuHtml += '<span class="sod_flyout" style="position: absolute; top: 0; left: calc(100% + 1px); box-shadow: 0 3px 5px #999; width: 100%; background: #fff; display: none;">';
-              $('.sod_option[title*="' + site + '"]').each(function() {
-                var elem = $('<span>');
-                elem.attr({
-                  'title': $(this).attr('title'),
-                  'data-value': $(this).attr('data-value'),
-                  'style': 'display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; position: relative; padding: 10px 30px 10px 10px; list-style-type: none;',
-                  'class': 'sod_option_update'
-                });
-                elem.html( $(this).html() );
-                if (curr == $(this).attr('data-value')) elem.append(selectedIcon);
-                tamperMenuHtml += elem[0].outerHTML;
-              });
-              tamperMenuHtml += '</span>';
-              tamperMenuHtml += '</span>';
-          } else {
-            var item = $('.sod_option[title*="' + site + '"]');
+        if ( $('.sod_option[title*="' + site + '"]').length > 1 ) {
+          tamperMenuHtml += '<span class="sod_container" style="position: relative; display: block; white-space: nowrap; width: 100%;">';
+          tamperMenuHtml += '<span title="' + site + '" style="display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; position: relative; padding: 10px; margin: 5px 0; list-style-type: none;">' + site + '<span style="position: absolute;transform: translate(0, -50%);top: 46%;right: 7px;font-weight: bold;font-size: 24px;">&rsaquo;</span></span>';
+          tamperMenuHtml += '<span class="sod_flyout" style="position: absolute; top: 0; left: calc(100% + 1px); box-shadow: 0 3px 5px #999; width: 100%; min-width: 250px; background: #fff; display: none;">';
+          $('.sod_option[title*="' + site + '"]').each(function() {
             var elem = $('<span>');
-            var selected = (curr == item.attr('data-value'));
             elem.attr({
-              'title': item.attr('title'),
-              'data-value': item.attr('data-value'),
+              'title': $(this).attr('title'),
+              'data-value': $(this).attr('data-value'),
               'style': 'display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; position: relative; padding: 10px 30px 10px 10px; list-style-type: none;',
               'class': 'sod_option_update'
             });
-            elem.html( item.html() );
-            if (curr == item.attr('data-value')) elem.append(selectedIcon);
+            elem.html( $(this).html() );
+            if (curr == $(this).attr('data-value')) elem.append(selectedIcon);
             tamperMenuHtml += elem[0].outerHTML;
-          }
+          });
+          tamperMenuHtml += '</span>';
+          tamperMenuHtml += '</span>';
+        } else {
+          var item = $('.sod_option[title*="' + site + '"]');
+          var elem = $('<span>');
+          var selected = (curr == item.attr('data-value'));
+          elem.attr({
+            'title': item.attr('title'),
+            'data-value': item.attr('data-value'),
+            'style': 'display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; position: relative; padding: 10px 30px 10px 10px; list-style-type: none;',
+            'class': 'sod_option_update'
+          });
+          elem.html( item.html() );
+          if (curr == item.attr('data-value')) elem.append(selectedIcon);
+          tamperMenuHtml += elem[0].outerHTML;
+        }
       });
       tamperMenuHtml += '</span>';
       tamperMenuHtml += '</span>';
@@ -72,10 +72,10 @@ export function bmMenu() {
       $('#SelectedSiteID-wrap').replaceWith(tamperMenuHtml);
 
       $('body').on('mouseenter', '.sod_container', function() {
-          $(this).find('.sod_flyout').fadeIn(150);
+        $(this).find('.sod_flyout').fadeIn(150);
       });
       $('body').on('mouseleave', '.sod_container', function() {
-          $(this).find('.sod_flyout').fadeOut(150);
+        $(this).find('.sod_flyout').fadeOut(150);
       });
 
       $('body').on('click', '.sod_select', function() {
@@ -95,7 +95,7 @@ export function bmMenu() {
         if (evt.keyCode == 27) {
           toggleSelectMenu(true);
         }
-        });
+      });
     }
 
     function toggleSelectMenu(removeMenu) {
