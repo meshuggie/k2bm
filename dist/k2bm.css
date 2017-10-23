@@ -149,4 +149,10 @@
   opacity: 0;
   z-index: 1; }
 
+.header--Sandbox {
+  background-color: lawngreen !important; }
+
+.header--Staging {
+  background-color: yellow !important; }
+
 /*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJrMmJtLmNzcyIsInNvdXJjZVJvb3QiOiIifQ==*/
