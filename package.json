@@ -1,6 +1,6 @@
 {
   "name": "k2bm",
-  "version": "1.6.2",
+  "version": "1.6.3",
   "description": "Chrome extension for Demandware Business Manager",
   "main": "index.js",
   "scripts": {

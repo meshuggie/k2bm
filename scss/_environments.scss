@@ -1,6 +1,10 @@
 .header--Sandbox {
-  background-color: lawngreen !important;
+  .header__logo {
+    background-color: lawngreen !important;
+  }
 }
 .header--Staging {
-  background-color: yellow !important;
+  .header__logo {
+    background-color: yellow !important;
+  }
 }

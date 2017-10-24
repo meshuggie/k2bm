@@ -149,10 +149,10 @@
   opacity: 0;
   z-index: 1; }
 
-.header--Sandbox {
+.header--Sandbox .header__logo {
   background-color: lawngreen !important; }
 
-.header--Staging {
+.header--Staging .header__logo {
   background-color: yellow !important; }
 
 tr.hover {
