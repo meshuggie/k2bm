@@ -1,6 +1,6 @@
 {
   "name": "k2bm",
-  "version": "1.6.3",
+  "version": "1.6.4",
   "description": "Chrome extension for Demandware Business Manager",
   "main": "index.js",
   "scripts": {
@@ -13,21 +13,21 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "checkboxes.js": "^1.0.7",
-    "jquery": "^3.2.1"
+    "checkboxes.js": "^1.2.2",
+    "jquery": "^3.3.1"
   },
   "devDependencies": {
-    "@types/jquery": "^3.2.12",
-    "css-loader": "^0.28.5",
-    "extract-text-webpack-plugin": "^3.0.0",
+    "@types/jquery": "^3.3.1",
+    "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^0.11.2",
     "import-glob-loader": "^1.1.0",
-    "node-sass": "^4.5.3",
+    "node-sass": "^4.9.0",
     "raw-loader": "^0.5.1",
-    "sass-loader": "^6.0.6",
+    "sass-loader": "^6.0.7",
     "style-loader": "^0.18.2",
-    "ts-loader": "^2.3.3",
+    "ts-loader": "^2.3.7",
     "url-loader": "^0.5.9",
-    "webpack": "^3.5.5"
+    "webpack": "^3.11.0"
   }
 }
